@@ -4,7 +4,7 @@
       <div class="container">
         <nav class="log">
           <div>
-            <button>SIGN-UP NOW!</button>
+            <button><a href="#">SIGN-UP NOW!</a></button>
           </div>
           <ul class="log">
             <li>
@@ -42,6 +42,9 @@ export default {
 .footer_box {
   background-color: #30302f;
   color: white;
+  z-index: 10;
+  position: relative;
+  height: 100px;
 }
 .log {
   display: flex;
@@ -51,11 +54,27 @@ export default {
 li {
   display: inline-block;
   margin: 10px;
+  margin-top: 10px;
 }
 img {
   width: 30px;
+  margin-top: 30px;
 }
-strong {
-  margin-bottom: 30px;
+button {
+  margin-top: 25px;
+  padding: 10px;
+  background-color: #30302f;
+  border: 2px solid #427abe;
+}
+h4 {
+  margin-top: 25px;
+}
+button a {
+  text-decoration: none;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: #427abe;
 }
 </style>

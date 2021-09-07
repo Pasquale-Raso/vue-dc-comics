@@ -62,6 +62,7 @@ export default {
 .main_box {
   height: 400px;
   background-color: black;
+  background-image: url(./assets/footer-bg.jpg);
   color: white;
   position: relative;
 }
@@ -70,6 +71,7 @@ export default {
 }
 .trecol {
   width: 400px;
+  margin-top: 20px;
 }
 .col1,
 .col2,
@@ -78,9 +80,21 @@ export default {
   padding-left: 50px;
 }
 img {
-  width: 30%;
-  height: 100%;
+  height: 140%;
   position: absolute;
-  right: 200px;
+  right: 160px;
+  bottom: 0px;
+  top: -70px;
+}
+a {
+  text-decoration: none;
+  color: #999ca1;
+  font-size: 13px;
+}
+ul {
+  list-style-type: none;
+}
+h3 {
+  margin-top: 15px;
 }
 </style>
