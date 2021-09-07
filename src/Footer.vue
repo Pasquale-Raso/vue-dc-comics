@@ -55,6 +55,7 @@ li {
   display: inline-block;
   margin: 10px;
   margin-top: 10px;
+  cursor: pointer;
 }
 img {
   width: 30px;

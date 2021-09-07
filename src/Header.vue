@@ -1,44 +1,19 @@
 <template>
   <header>
     <div class="container head">
-      <img src="@/assets/dc-logo.png" alt="logo" />
+      <img class="logo" src="@/assets/dc-logo.png" alt="logo" />
       <nav>
-        <ul class="nav">
-          <li>
-            <strong><a href="#">CARACTERS</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">COMICS</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">MOVIES</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">TV</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">GAMES</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">COLLECTIBLES</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">VIDEO</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">FANS</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">NEWS</a></strong>
-          </li>
-          <li>
-            <strong><a href="#">SHOP</a></strong>
+        <ul>
+          <li v-for="link in links" :key="link.tex">
+            <strong
+              ><a href="#">{{ link.text }}</a></strong
+            >
           </li>
         </ul>
       </nav>
     </div>
     <div class="sottotitolo">
-      <h3>--> Content goes here</h3>
+      <h3><a class="content" href="#"> --> Content goes here --></a></h3>
     </div>
   </header>
 </template>
@@ -47,7 +22,60 @@
 export default {
   name: "Header",
   data() {
-    return {};
+    return {
+      links: [
+        {
+          text: "Characters",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Comics",
+          url: "#",
+          current: true,
+        },
+        {
+          text: "Movies",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "TV",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Games",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Collectibles",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Videos",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Fans",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "News",
+          url: "#",
+          current: false,
+        },
+        {
+          text: "Shop",
+          url: "#",
+          current: false,
+        },
+      ],
+    };
   },
 };
 </script>
@@ -58,9 +86,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
 }
-.nav {
+.logo {
+  cursor: pointer;
+}
+nav {
   list-style-type: none;
 }
 ul li a {
@@ -70,13 +100,13 @@ ul li a {
 }
 li {
   display: inline-block;
-  margin: 0px 13px;
+  margin: 10px;
 }
-a:hover {
+strong a:hover {
   color: #427abe;
   padding-bottom: 32px;
 }
-a:hover {
+strong a:hover {
   color: #427abe;
   border-bottom: 4px solid #427abe;
 }
@@ -94,5 +124,9 @@ img {
 .sottotitolo h3 {
   margin-left: 190px;
   font-size: 23px;
+}
+.content {
+  color: white;
+  text-decoration: none;
 }
 </style>
