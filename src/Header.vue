@@ -13,7 +13,9 @@
       </nav>
     </div>
     <div class="sottotitolo">
-      <h3><a class="content" href="#"> --> Content goes here --></a></h3>
+      <h3>
+        <a class="content container" href="#"> --> Content goes here --></a>
+      </h3>
     </div>
   </header>
 </template>
