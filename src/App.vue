@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <Header />
+    <Banner />
+    <Products />
     <NavbarIcons />
     <Main />
     <Footer />
@@ -12,6 +14,8 @@ import Header from "./Header.vue";
 import NavbarIcons from "./NavbarIcons.vue";
 import Main from "./Main.vue";
 import Footer from "./Footer.vue";
+import Banner from "./Banner.vue";
+import Products from "./Products.vue";
 
 export default {
   name: "App",
@@ -20,6 +24,8 @@ export default {
     NavbarIcons: NavbarIcons,
     Main: Main,
     Footer: Footer,
+    Banner: Banner,
+    Products: Products,
   },
 };
 </script>
